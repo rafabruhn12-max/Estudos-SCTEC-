@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SCTEC - INTERATIVIDADE COM JAVASCRIPT</title>
+    
+
+    <style>
+      .btn {
+        padding: 16px 32px;
+        border: 0;
+        background: rgb(64, 8, 121);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      .inativo {
+        background: red;
+        cursor: not-allowed;
+      }
+
+      input {
+        padding: 16px;
+        border-radius: 8px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Introdução a DOM</h1>
+    
+    <input type="text" placeholder="Informe seu nome"/>
+    <button class="btn inativo">Clique aqui!</button>
+
+    
+
+    <section id="sobre"></section>
+
+
+
+    <form>
+      <input type="email" placeholder="Iforme seu e-mail"/>
+      <input type="password" placeholder="Iforme sua senha"/>
+
+      <button>Entrar</button>
+    </form>
+    <script>
+      const tituloElemento = document.querySelector("h1");
+
+      //console.log(tituloElemento.innerText);
+      //tituloElemento.innerText = "Minha primeira seleção de elemento";
+      //tituloElemento.innerHTML = "<span>exemplo</span>"
+
+      //// get element by id
+      const secaoSobreElemento = document.getElementById("sobre");
+
+      secaoSobreElemento.innerHTML = "<h2>Sobre nosso PetShop</h2>";
+
+      const buttonElemento = document.querySelector(".btn");
+
+      buttonElemento.classList.remove("inativo");
+
+      //buttonElemento.style.color = "red";
+
+      const inputElement = document.querySelector("input");
+
+      console.log(inputElement.value);
+
+      // Criando elementos virtual
+
+      const subtitulo = document.createElement("h6");
+      subtitulo.innerText = "Veja nossos Produtos";
+      subtitulo.style.color = "red";
+      subtitulo.style.backgroundColor = "yellow";
+
+      secaoSobreElemento.appendChild(subtitulo);
+      //secaoSobreElemento.innerHTML = "<h6>Veja nossos Produtos</h6>"
+
+
+      // Eventos
+
+      buttonElemento.addEventListener("click", function (event) {
+       //console.log(event.target.classList);
+       //event.target.classList.toggle("inativo")
+       const valorDoinput = inputElement.value;
+       const spanElemento = document.createElement("spam");
+       spanElemento.style.display = "block";
+       spanElemento.style.marginBottom = "8px";
+
+       spanElemento.innerText = valorDoinput;
+       
+       secaoSobreElemento.appendChild(spanElemento);
+        
+       inputElement.value = "";
+      });
+
+
+
+
+    </script>
+    
+  </body>
+</h

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Estruturas Condicionais</h1>
+
+    <script>
+      let idadePet = 2;
+
+      if (idadePet >= 1) {
+        console.log("Pode tomar banho");
+        let codigoPromocional = 1234;
+      } else {
+        console.log("nao pode");
+      }
+
+      // Multiplas Decisões
+
+      let porte = "pequeno";
+
+      if (porte === "pequeno") {
+        console.log("Valor: R$ 30");
+      } else if (porte === "medio") {
+        console.log("Valor: R$ 45");
+      } else {
+        console.log("Valor: R$ 65");
+      }
+
+      // Switch - Casos
+
+      // 1 - domingo; 2 - segunda...
+
+      let diaSemana = 5;
+
+      switch (diaSemana) {
+        case 1:
+          console.log("Domingo");
+          break;
+        case 2:
+          console.log("Segunda");
+          break;
+        case 3:
+          console.log("terça");
+          break;
+        case 4:
+          console.log("Quarta");
+          break;
+        case 5:
+          console.log("Quinta");
+          break;
+        case 6:
+          console.log("sexta");
+          break;
+        case 7:
+          console.log("Sabado");
+          break;
+
+        default:
+          console.log("Sem disponibilidade!");
+      }
+
+      ////--------
+      //ESTRUTURAS DE REPETIÇÃO
+
+      for (let interador = 0; interador < 10; interador++) {
+        //console.log(`Pet de número:${interador +1}`);
+      }
+
+
+    //Lista de Atendimento - Ex.
+
+    let lista = [];
+
+    //lista.push("pet 3");
+
+    //console.log(lista);
+
+    for (let interador = 0; interador < 5; interador++) {
+      // console.log(`pet n°: ${interador + 1}`)
+      lista.push(`pet n: ${interador} + 1`);
+    }
+    
+    //console.log(lista)
+
+    //while
+    let contador = 0;
+
+    while (contador <= 10) {
+      //console.log(`valor do controle : ${contador}`);
+      contador += 1;
+    }
+
+
+    //Funções
+
+    function boasVindas() {
+      console.log("Bem-vendo!")
+    }
+
+    boasVindas();
+    //boasVindas();
+
+    function atenderPet(nomePet, tipo) {
+      console.log(`
+      Atendendo o Pet ${nomePet}.
+      Tipo: ${tipo}
+      `)
+    }
+
+    // atenderPet("Blippi", "cachorro");
+    // atenderPet("Belinha", "cachorro");
+    // atenderPet("Dona", "Calopsita");
+    // atenderPet("Fernendo","bode");
+    
+    function calcularPreco(porte) {
+
+      if (porte === "pequeno") {
+        return 45;
+      } else if (porte === "medio") {
+        return 55;
+      } else {
+        return 65;
+      }
+    }
+
+    let valorTotal = calcularPreco("pequeno");
+
+    console.log(valorTotal);
+
+    console.log(calcularPreco("grande"));
+
+
+    </script>
+  </body>
+</h

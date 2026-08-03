@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulario</title>
+
+    <style>
+      .btn {
+        padding: 16px 32px;
+        border: 0;
+        background: green;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      input {
+        padding: 16px;
+        border-radius: 8px;
+      }
+
+      .error-input {
+        border-color: red;
+      }
+
+      form {
+        width: 100%;
+        border: 1px solid red;
+        margin: 64px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <form>
+      <input id="nome" type="text" placeholder="Seu Nome"/>
+      <input id="email" type="email" placeholder="Seu E-mail" required/>
+      <input id="senha" type="password" placeholder="Sua Senha"/>
+      
+      <button class="btn">Salvar</button>
+    </form>
+
+    <script>
+      const formElement = document.querySelector("form");
+
+      // campos de entrada 
+
+      const inputNome = document.querySelector("#nome");
+      const inputEmail = document.querySelector("#email");
+      const inputSenha = document.querySelector("#senha");
+
+      formElement.addEventListener("submit", function (event){
+        event.preventDefault(); //responsavel para evitar o comportamento padrão!
+
+        if (inputNome.value === "") {
+          //alert('Informe seu Nome');
+          inputNome.classList.add("error-input");
+        }
+
+        console.log(inputNome.value, inputEmail.value, inputSenha.value);
+        
+      })
+    </script>
+  </body>
+</html>

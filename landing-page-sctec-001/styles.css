@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1, 
+h2,
+h3 {
+  font-family: "Fredoka", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  color: #E75700;
+  font-size: 40px;
+}
+
+.conteiner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /*Centraliza*/
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.azul {
+  color: #77b7eb;
+}
+
+.logotipo {
+  font-family: "Fredoka", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #E75700;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.cabecalho .menu {
+  display: flex;
+  gap: 16px;
+}
+
+.cabecalho .menu a {
+  text-decoration: none;
+  color: #E75700;
+}
+
+.hamburguer {
+  display: none;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background-color: #E75700;
+  margin: 10px 20px;
+  border-radius: 30px;
+  color: #fef4e0ff;
+  padding: 40px 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative; /*quando se usa o absolute <--(img) tem q indicar o relative*/
+}
+
+.hero_conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero .hero_acoes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero .hero_acoes button {
+  padding: 16px 24px;
+  background: #77b7eb;
+  color: #E75700;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.hero .hero_acoes a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero_imagem img {
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 64px;
+}
+
+@media (max-width: 768px) {
+  .hero .hero_conteudo {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero_imagem {
+    display: none;
+  }
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.sobre_info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.sobre_info .sobre_conteudo {
+  flex: 1; 
+}
+
+.sobre_info .sobre_imagem {
+  flex: 1;
+  aspect-ratio: 1 /1;
+  background: #77b7eb;
+  border-radius: 30px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre_indicadores {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.sobre_indicadores .sobre_indicador_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sobre_indicadores .sobre_indicador_item strong {
+  font-family: "fredoka", sans-serif;
+  font-size: 40px;
+  color: #E75700;
+}
+
+@media (max-width: 768px) {
+  .sobre_info {
+    flex-direction: column;
+  }
+}
+
+
+
+
